@@ -1,24 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
+import Notes from './components/Notes/Notes';
+import Reminder from './components/Reminder/Reminder';
+import Navigation from './components/Navigation/Navigation';
+import Groups from './components/Groups/Groups';
+import { BrowserRouter, Route } from 'react-router-dom';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="app-wrapper">
+        <Header />
+        <Navigation />
+        <div className="app-wrapper-content">
+          <Route path="/notes" component={Notes} />
+          <Route path="/reminder" component={Reminder} />
+          <Route path="/groups" component={Groups} />
+        </div>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 

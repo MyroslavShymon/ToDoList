@@ -1,0 +1,29 @@
+.menu__text{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    justify-self: start;
+}
+.menu__img{
+    background-size: cover;
+    justify-self: center;
+}
+.menu__item{
+    display: grid;
+    align-items: center;
+    width: 90%;
+    height: 40px;
+    border-radius: 0 20px 20px 0;
+    grid-template-columns: 30% 70%;
+    color: rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+}
+.menu__item_active{
+    background-color: rgba(162, 121, 255, 0.5);
+}
+.menu__item_active .menu__text{
+    font-weight: 700;
+}
+.menu__item:hover:not(.menu__item_active){
+    background-color: rgba(196, 196, 196, 0.3);
+}
