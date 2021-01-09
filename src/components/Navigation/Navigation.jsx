@@ -18,7 +18,7 @@ function Navigation() {
                 <NavigationItem text="Замітки" link="/notes" />
                 <NavigationItem text="Нагадування" link="/reminder"/>
                 <NavigationItem text="Групи" link="/groups"/>
-                <NavigationItem text="Івенти" />
+                <NavigationItem text="Івентии" />
                 <NavigationItem text="Календар" />
                 <NavigationItem text="Ярлики" />
                 <NavigationItem text="Архів" />
