@@ -4,20 +4,20 @@ import Header from './components/Header/Header';
 import Notes from './components/Notes/Notes';
 import Reminder from './components/Reminder/Reminder';
 import Navigation from './components/Navigation/Navigation';
-import Groups from './components/Groups/Groups';
 import { BrowserRouter, Route } from 'react-router-dom';
+import Chats from './components/Chats/Chats';
 
 
-function App() {
+function App(props) {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
         <Header />
         <Navigation />
         <div className="app-wrapper-content">
-          <Route path="/notes" component={Notes} />
-          <Route path="/reminder" component={Reminder} />
-          <Route path="/groups" component={Groups} />
+          <Route path="/notes" render={() => <Notes/>} />
+          <Route path="/reminder" render={() => <Reminder />} />
+          <Route path="/chats" render={() => <Chats chatsData={props.state.chatsData} massagesData={props.state.massagesData}/>} />
         </div>
         <Footer />
       </div>

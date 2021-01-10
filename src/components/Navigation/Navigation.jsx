@@ -17,8 +17,8 @@ function Navigation() {
             <div className={classes.menu, classes.navigation__menu}>
                 <NavigationItem text="Замітки" link="/notes" />
                 <NavigationItem text="Нагадування" link="/reminder"/>
-                <NavigationItem text="Групи" link="/groups"/>
-                <NavigationItem text="Івентии" />
+                <NavigationItem text="Усі чати" link="/chats"/>
+                <NavigationItem text="Івенти" />
                 <NavigationItem text="Календар" />
                 <NavigationItem text="Ярлики" />
                 <NavigationItem text="Архів" />
